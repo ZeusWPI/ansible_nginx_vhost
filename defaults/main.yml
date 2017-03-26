@@ -1,2 +1,11 @@
 ---
-# defaults file for nginx_vhost
+
+# Where to find the vhost file
+# This is relative to the playbook directory.
+# example: roles/webapp/templates/site.conf
+nginx_vhost_src:
+
+# Take the basename as default name
+# roles/webapp/files/webapp.conf -> webapp.conf
+nginx_vhost_name: "{{ nginx_vhost_src | basename }}"
+

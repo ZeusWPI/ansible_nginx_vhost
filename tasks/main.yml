@@ -1,7 +1,7 @@
 ---
 - name: Copy vhost file (optionally fill in variables)
   template:
-    src: "{{nginx_vhost_location }}"
+    src: "{{ nginx_vhost_src }}"
     dest: "/etc/nginx/sites-available/{{ nginx_vhost_name }}"
   notify: Restart nginx
 
