@@ -1,0 +1,17 @@
+---
+- name: Copy vhost file (optionally fill in variables)
+  template:
+    src: "{{nginx_vhost_location }}"
+    dest: "/etc/nginx/sites-available/{{ nginx_vhost_name }}"
+  notify: Restart nginx
+
+- name: Symlink the file
+  file:
+    src: "/etc/nginx/sites-available/{{ nginx_vhost_name }}"
+    dest: "/etc/nginx/sites-enabled/{{ nginx_vhost_name }}"
+    state: link
+  notify: Restart nginx
+
+- name: Check nginx syntax
+  command: /usr/sbin/nginx -t
+
