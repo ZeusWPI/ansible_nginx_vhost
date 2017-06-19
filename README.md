@@ -1,7 +1,7 @@
 NGINX vhost
 =========
 
-A role to install an NGINX vhost. Meant to be used with `ZeusWPI.nginx_base`. Just point to a vhost file and it will be copied. You can even use jinja templates if you want!
+A role to install an NGINX vhost. Meant to be used with `ZeusWPI.nginx_certbot_base`. Just point to a vhost file and it will be copied. You can even use jinja templates if you want!
 
 Requirements
 ------------
@@ -16,7 +16,7 @@ Check out `defaults/main.yml`, I try to document each variable there.
 Dependencies
 ------------
 
-- `ZeusWPI.nginx_base`
+- `ZeusWPI.nginx_certbot_base`
 
 Example Playbook
 ----------------

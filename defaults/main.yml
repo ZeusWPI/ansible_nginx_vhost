@@ -2,6 +2,7 @@
 
 # Where to find the vhost file
 # This is relative to the playbook directory.
+# The template module is used to copy this file to the server
 # example: roles/webapp/templates/site.conf
 nginx_vhost_src:
 
